@@ -26,16 +26,17 @@ Sensors: Single-Photon Avalanche Diode (SPAD)
 
 Optics: Single-Mode Fiber (SMF) spatial filtering
 
-## Project Layout
+## 📂 Project Layout
 
-optotwin-hil/
-├── pyproject.toml             # Modern build system & dependencies
-├── README.md                  # Project overview
-├── src/
-│   └── optotwin/              # Core Python package
-│       ├── core/              # ABC interfaces, affine mapping, state machine
-│       ├── hal/               # NI-DAQ orchestrator and clock routing
-│       ├── trajectory/        # Path planning generators
-│       └── twin/              # Forward models (SciPy/JAX)
-├── tests/                     # Pytest suite
-└── examples/                  # High-level execution scripts (e.g., Knife-Edge Test)
+* **`optotwin-hil/`** *(Root Directory)*
+  * `pyproject.toml` — Modern build system and dependency management (PEP 621).
+  * `README.md` — Project architecture, hardware stack, and overview.
+  * **`src/optotwin/`** — The core Python package.
+    * **`core/`** — The foundational rules of the system. Contains Abstract Base Classes (ABCs), affine coordinate transformation matrices, and the Metrology Supervisor state machine.
+    * **`hal/`** — Hardware Abstraction Layer. This is the only directory allowed to import `nidaqmx`. It contains the orchestrator for DAQ clock routing and hardware-timed synchronization.
+    * **`trajectory/`** — Geometric path planning. Generates deterministic arrays for 1D sweeps, extremum-seeking dithering, and sparse spirals, completely agnostic of the hardware.
+    * **`twin/`** — The Digital Twin engine. Contains the physical forward models (e.g., the Gaussian step-edge response) and the optimization algorithms (SciPy and JAX) to extract sub-pixel metrology data.
+  * **`tests/`** — The `pytest` suite. Contains unit tests for trajectories and mathematical models that can run in a CI/CD pipeline without physical hardware attached.
+  * **`examples/`** — High-level execution scripts serving as practical entry points.
+    * `01_knife_edge_diag.py` — Script to execute a 1D sweep and verify single-mode fiber (SMF) coupling symmetry.
+    * `02_active_tracking.py` — Script initiating closed-loop, gradient-based edge locking.
