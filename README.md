@@ -25,3 +25,17 @@ Actuators: X/Y Galvo Mirrors
 Sensors: Single-Photon Avalanche Diode (SPAD)
 
 Optics: Single-Mode Fiber (SMF) spatial filtering
+
+## Project Layout
+
+optotwin-hil/
+├── pyproject.toml             # Modern build system & dependencies
+├── README.md                  # Project overview
+├── src/
+│   └── optotwin/              # Core Python package
+│       ├── core/              # ABC interfaces, affine mapping, state machine
+│       ├── hal/               # NI-DAQ orchestrator and clock routing
+│       ├── trajectory/        # Path planning generators
+│       └── twin/              # Forward models (SciPy/JAX)
+├── tests/                     # Pytest suite
+└── examples/                  # High-level execution scripts (e.g., Knife-Edge Test)
