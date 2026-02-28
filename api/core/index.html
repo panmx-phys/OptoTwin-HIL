@@ -1,0 +1,1909 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../hardware/">
+      
+      
+        <link rel="next" href="../hal/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>Core API Reference - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#core-api-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Core API Reference
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OptoTwin-HIL Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples &amp; Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Api
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Api
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core API Reference
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract-base-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abstract Base Classes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Abstract Base Classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scanner-abc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scanner (ABC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detector-abc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detector (ABC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coordinate-transforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coordinate Transforms
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Coordinate Transforms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#affinetransform2d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AffineTransform2D
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AffineTransform2D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instance Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scanconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ScanConfig
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ScanConfig">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computed-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Computed Properties
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dualareascanconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DualAreaScanConfig
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DualAreaScanConfig">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fields_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Utilities
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Utilities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#calculate_square_pixels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        calculate_square_pixels
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#make_config_square" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        make_config_square
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#print_scan_time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        print_scan_time
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rect_to_lims" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        rect_to_lims
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metrology-supervisor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metrology Supervisor
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metrology Supervisor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-enum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State (Enum)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supervisorconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SupervisorConfig
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrologysupervisor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MetrologySupervisor
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MetrologySupervisor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HAL API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trajectory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trajectory API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../twin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Twin API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract-base-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abstract Base Classes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Abstract Base Classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scanner-abc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scanner (ABC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detector-abc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detector (ABC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coordinate-transforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coordinate Transforms
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Coordinate Transforms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#affinetransform2d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AffineTransform2D
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AffineTransform2D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instance Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scanconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ScanConfig
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ScanConfig">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computed-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Computed Properties
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dualareascanconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DualAreaScanConfig
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DualAreaScanConfig">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fields_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Utilities
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Utilities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#calculate_square_pixels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        calculate_square_pixels
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#make_config_square" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        make_config_square
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#print_scan_time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        print_scan_time
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rect_to_lims" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        rect_to_lims
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metrology-supervisor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metrology Supervisor
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metrology Supervisor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-enum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State (Enum)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supervisorconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SupervisorConfig
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrologysupervisor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MetrologySupervisor
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MetrologySupervisor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="core-api-reference">Core API Reference</h1>
+<p><code>optotwin.core</code> -- Configuration dataclasses, coordinate transforms, abstract base classes, utilities, and the metrology supervisor state machine.</p>
+<pre><code class="language-python">from optotwin.core import (
+    AffineTransform2D,
+    MetrologySupervisor, SupervisorConfig, State,
+    ScanConfig, DualAreaScanConfig,
+    calculate_square_pixels, make_config_square, print_scan_time, rect_to_lims,
+)
+</code></pre>
+<hr />
+<h2 id="abstract-base-classes">Abstract Base Classes</h2>
+<p><strong>Module:</strong> <code>optotwin.core.abc</code></p>
+<h3 id="scanner-abc"><code>Scanner</code> (ABC)</h3>
+<p>Interface for any device that positions the excitation beam.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Signature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>write_voltages</code></td>
+<td><code>(voltages: NDArray[np.float64]) -&gt; None</code></td>
+<td>Write (N, 2) array of (u, v) galvo samples</td>
+</tr>
+<tr>
+<td><code>close</code></td>
+<td><code>() -&gt; None</code></td>
+<td>Release hardware resources</td>
+</tr>
+</tbody>
+</table>
+<h3 id="detector-abc"><code>Detector</code> (ABC)</h3>
+<p>Interface for photon-counting or analog detectors.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Signature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>read_counts</code></td>
+<td><code>(n_samples: int) -&gt; NDArray[np.uint32]</code></td>
+<td>Return (N,) array of counts</td>
+</tr>
+<tr>
+<td><code>close</code></td>
+<td><code>() -&gt; None</code></td>
+<td>Release hardware resources</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="coordinate-transforms">Coordinate Transforms</h2>
+<p><strong>Module:</strong> <code>optotwin.core.transforms</code></p>
+<h3 id="affinetransform2d"><code>AffineTransform2D</code></h3>
+<p>2-D affine coordinate mapping between physical (x, y) and actuator (u, v) spaces.</p>
+<h4 id="constructor">Constructor</h4>
+<pre><code class="language-python">AffineTransform2D(matrix: ArrayLike | None = None)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>matrix</code></td>
+<td><code>ArrayLike \| None</code></td>
+<td><code>None</code></td>
+<td>3x3 homogeneous transform matrix. <code>None</code> = identity.</td>
+</tr>
+</tbody>
+</table>
+<p>Raises <code>ValueError</code> if matrix is not shape (3, 3).</p>
+<h4 id="class-methods">Class Methods</h4>
+<pre><code class="language-python">@classmethod
+AffineTransform2D.from_scale_offset(
+    scale_x: float,
+    scale_y: float,
+    offset_x: float = 0.0,
+    offset_y: float = 0.0,
+) -&gt; AffineTransform2D
+</code></pre>
+<p>Factory for diagonal scaling + offset transforms:</p>
+<pre><code>| scale_x   0      offset_x |
+|   0     scale_y  offset_y |
+|   0       0         1     |
+</code></pre>
+<h4 id="instance-methods">Instance Methods</h4>
+<pre><code class="language-python">def forward(xy: ArrayLike) -&gt; np.ndarray
+</code></pre>
+<p>Map physical (x, y) to actuator (u, v). Input shape <code>(..., 2)</code>.</p>
+<pre><code class="language-python">def inverse(uv: ArrayLike) -&gt; np.ndarray
+</code></pre>
+<p>Map actuator (u, v) to physical (x, y). Input shape <code>(..., 2)</code>.</p>
+<h4 id="properties">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>matrix</code></td>
+<td><code>np.ndarray</code></td>
+<td>Copy of the 3x3 transformation matrix</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example">Example</h4>
+<pre><code class="language-python">t = AffineTransform2D.from_scale_offset(2.0, -1.5, offset_x=0.1)
+uv = t.forward([1.0, 2.0])   # [2.1, -3.0]
+xy = t.inverse(uv)            # [1.0, 2.0]  (round-trip)
+</code></pre>
+<hr />
+<h2 id="configuration">Configuration</h2>
+<p><strong>Module:</strong> <code>optotwin.core.config</code></p>
+<h3 id="scanconfig"><code>ScanConfig</code></h3>
+<p>Dataclass for single-area 2-D raster scan parameters.</p>
+<h4 id="fields">Fields</h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>x_px</code></td>
+<td><code>int</code></td>
+<td>--</td>
+<td>Horizontal pixel count</td>
+</tr>
+<tr>
+<td><code>y_px</code></td>
+<td><code>int</code></td>
+<td>--</td>
+<td>Vertical pixel count</td>
+</tr>
+<tr>
+<td><code>xlims</code></td>
+<td><code>tuple[float, float]</code></td>
+<td>--</td>
+<td>X-axis voltage range (start, stop)</td>
+</tr>
+<tr>
+<td><code>ylims</code></td>
+<td><code>tuple[float, float]</code></td>
+<td>--</td>
+<td>Y-axis voltage range (start, stop)</td>
+</tr>
+<tr>
+<td><code>dwell_time</code></td>
+<td><code>float</code></td>
+<td>--</td>
+<td>Seconds per pixel</td>
+</tr>
+<tr>
+<td><code>accumulation</code></td>
+<td><code>int</code></td>
+<td><code>1</code></td>
+<td>Number of full-frame passes</td>
+</tr>
+<tr>
+<td><code>nd_filters</code></td>
+<td><code>list[int]</code></td>
+<td><code>[]</code></td>
+<td>ND filter indices (metadata)</td>
+</tr>
+<tr>
+<td><code>experiment_name</code></td>
+<td><code>str</code></td>
+<td><code>""</code></td>
+<td>QCoDeS experiment label</td>
+</tr>
+<tr>
+<td><code>sample_name</code></td>
+<td><code>str</code></td>
+<td><code>""</code></td>
+<td>QCoDeS sample label</td>
+</tr>
+<tr>
+<td><code>measurement_name</code></td>
+<td><code>str</code></td>
+<td><code>""</code></td>
+<td>QCoDeS measurement label</td>
+</tr>
+<tr>
+<td><code>comment</code></td>
+<td><code>str</code></td>
+<td><code>""</code></td>
+<td>Free-form annotation</td>
+</tr>
+</tbody>
+</table>
+<h4 id="computed-properties">Computed Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>n_pixels</code></td>
+<td><code>int</code></td>
+<td><code>x_px * y_px</code></td>
+</tr>
+<tr>
+<td><code>frame_time_s</code></td>
+<td><code>float</code></td>
+<td><code>n_pixels * dwell_time</code></td>
+</tr>
+<tr>
+<td><code>total_time_s</code></td>
+<td><code>float</code></td>
+<td><code>frame_time_s * accumulation</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="example_1">Example</h4>
+<pre><code class="language-python">cfg = ScanConfig(
+    x_px=200, y_px=200,
+    xlims=(-2.0, 2.0), ylims=(-2.0, 2.0),
+    dwell_time=0.5e-3,
+    accumulation=4,
+)
+print(cfg)
+# ScanConfig(200x200 px, dwell=0.50 ms, acc=4, total=80.00 s)
+</code></pre>
+<hr />
+<h3 id="dualareascanconfig"><code>DualAreaScanConfig</code></h3>
+<p>Dataclass for two-area interlaced raster scan parameters.</p>
+<h4 id="fields_1">Fields</h4>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>px1</code></td>
+<td><code>tuple[int, int]</code></td>
+<td>(x_px, y_px) for region 1</td>
+</tr>
+<tr>
+<td><code>px2</code></td>
+<td><code>tuple[int, int]</code></td>
+<td>(x_px, y_px) for region 2</td>
+</tr>
+<tr>
+<td><code>xlims1</code>, <code>ylims1</code></td>
+<td><code>tuple[float, float]</code></td>
+<td>Voltage ranges for region 1</td>
+</tr>
+<tr>
+<td><code>xlims2</code>, <code>ylims2</code></td>
+<td><code>tuple[float, float]</code></td>
+<td>Voltage ranges for region 2</td>
+</tr>
+<tr>
+<td><code>dwell_time</code></td>
+<td><code>float</code></td>
+<td>Seconds per pixel</td>
+</tr>
+<tr>
+<td><code>nd_filters</code></td>
+<td><code>list[int]</code></td>
+<td>ND filter indices (metadata)</td>
+</tr>
+<tr>
+<td><code>experiment_name</code>, <code>sample_name</code>, <code>measurement_name</code>, <code>comment</code></td>
+<td><code>str</code></td>
+<td>Labels</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="utilities">Utilities</h2>
+<p><strong>Module:</strong> <code>optotwin.core.utils</code></p>
+<h3 id="calculate_square_pixels"><code>calculate_square_pixels</code></h3>
+<pre><code class="language-python">def calculate_square_pixels(
+    xlims: tuple[float, float],
+    ylims: tuple[float, float],
+    base_px: int = 100,
+) -&gt; tuple[int, int]
+</code></pre>
+<p>Compute (x_px, y_px) that preserves the physical aspect ratio. The longer axis gets <code>base_px</code> pixels; the shorter axis is scaled proportionally.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>xlims</code></td>
+<td><code>tuple[float, float]</code></td>
+<td>--</td>
+<td>X-axis voltage range</td>
+</tr>
+<tr>
+<td><code>ylims</code></td>
+<td><code>tuple[float, float]</code></td>
+<td>--</td>
+<td>Y-axis voltage range</td>
+</tr>
+<tr>
+<td><code>base_px</code></td>
+<td><code>int</code></td>
+<td><code>100</code></td>
+<td>Pixel count for the longer axis</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <code>(x_px, y_px)</code></p>
+<hr />
+<h3 id="make_config_square"><code>make_config_square</code></h3>
+<pre><code class="language-python">def make_config_square(config: ScanConfig, base_px: int = 100) -&gt; ScanConfig
+</code></pre>
+<p>Modify a <code>ScanConfig</code> so its pixel counts match the aspect ratio of its voltage ranges. Returns the modified config.</p>
+<hr />
+<h3 id="print_scan_time"><code>print_scan_time</code></h3>
+<pre><code class="language-python">def print_scan_time(config: ScanConfig, multiplier: int = 1) -&gt; None
+</code></pre>
+<p>Print total and per-frame scan times to stdout.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config</code></td>
+<td><code>ScanConfig</code></td>
+<td>--</td>
+<td>Scan configuration</td>
+</tr>
+<tr>
+<td><code>multiplier</code></td>
+<td><code>int</code></td>
+<td><code>1</code></td>
+<td>Scale factor (e.g., number of laser setpoints)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="rect_to_lims"><code>rect_to_lims</code></h3>
+<pre><code class="language-python">def rect_to_lims(
+    rect: tuple[tuple[float, float], tuple[float, float]],
+    config: ScanConfig,
+) -&gt; ScanConfig
+</code></pre>
+<p>Set <code>config.xlims</code> and <code>config.ylims</code> from rectangle corner coordinates.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rect</code></td>
+<td><code>((x1, y1), (x2, y2))</code></td>
+<td>Two corners of a rectangle in voltage space</td>
+</tr>
+<tr>
+<td><code>config</code></td>
+<td><code>ScanConfig</code></td>
+<td>Config to modify</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> Modified config with updated limits.</p>
+<hr />
+<h2 id="metrology-supervisor">Metrology Supervisor</h2>
+<p><strong>Module:</strong> <code>optotwin.core.supervisor</code></p>
+<h3 id="state-enum"><code>State</code> (Enum)</h3>
+<pre><code class="language-python">class State(enum.Enum):
+    IDLE = &quot;idle&quot;
+    ACQUIRING = &quot;acquiring&quot;
+    FITTING = &quot;fitting&quot;
+    LOCKED = &quot;locked&quot;
+    FAULT = &quot;fault&quot;
+</code></pre>
+<h3 id="supervisorconfig"><code>SupervisorConfig</code></h3>
+<pre><code class="language-python">@dataclass
+class SupervisorConfig:
+    max_retries: int = 3
+    interlock_volts: float = 9.5
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>max_retries</code></td>
+<td><code>int</code></td>
+<td><code>3</code></td>
+<td>Max retry attempts before fault</td>
+</tr>
+<tr>
+<td><code>interlock_volts</code></td>
+<td><code>float</code></td>
+<td><code>9.5</code></td>
+<td>Hard stop if |voltage| exceeds this</td>
+</tr>
+</tbody>
+</table>
+<h3 id="metrologysupervisor"><code>MetrologySupervisor</code></h3>
+<p>Async state machine that sequences trajectory, acquisition, and fitting stages.</p>
+<h4 id="constructor_1">Constructor</h4>
+<pre><code class="language-python">MetrologySupervisor(config: SupervisorConfig | None = None)
+</code></pre>
+<h4 id="properties_1">Properties</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>state</code></td>
+<td><code>State</code></td>
+<td>Current supervisor state</td>
+</tr>
+</tbody>
+</table>
+<h4 id="methods">Methods</h4>
+<pre><code class="language-python">def on_state_change(cb: Callable[[State], None]) -&gt; None
+</code></pre>
+<p>Register a callback invoked on every state transition.</p>
+<pre><code class="language-python">async def run_sweep(
+    acquire_fn: Callable[[], tuple],
+    fit_fn: Callable[[tuple], dict],
+) -&gt; dict
+</code></pre>
+<p>Execute an acquire-then-fit cycle:</p>
+<ol>
+<li>Transition to <code>ACQUIRING</code>, call <code>acquire_fn()</code> in a thread</li>
+<li>Transition to <code>FITTING</code>, call <code>fit_fn(raw_data)</code> in a thread</li>
+<li>Return the fit results dict</li>
+<li>On success: return to <code>IDLE</code></li>
+<li>On error: transition to <code>FAULT</code>, re-raise the exception</li>
+</ol>
+<h4 id="example_2">Example</h4>
+<pre><code class="language-python">import asyncio
+
+supervisor = MetrologySupervisor()
+supervisor.on_state_change(lambda s: print(f&quot;State: {s.value}&quot;))
+
+async def main():
+    result = await supervisor.run_sweep(
+        acquire_fn=lambda: (positions, counts),
+        fit_fn=lambda raw: {&quot;x0&quot;: fit_edge(*raw).x0},
+    )
+    print(result)
+
+asyncio.run(main())
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

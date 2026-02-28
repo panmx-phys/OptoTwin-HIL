@@ -1,0 +1,1583 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../getting-started/">
+      
+      
+        <link rel="next" href="../api/core/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>Hardware Setup - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hardware-setup" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Hardware Setup
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OptoTwin-HIL Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples &amp; Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware Setup
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#system-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ni-usb-6421-daq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NI USB-6421 DAQ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NI USB-6421 DAQ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channel-assignments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Channel Assignments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#synchronisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Synchronisation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overriding-channel-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overriding Channel Names
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ni-daqmx-driver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NI-DAQmx Driver
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#galvo-mirrors-xy-scanning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Galvo Mirrors (X/Y Scanning)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Galvo Mirrors (X/Y Scanning)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#safety" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Safety
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parking
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spad-detector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SPAD Detector
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cld1015-laser-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CLD1015 Laser Controller
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CLD1015 Laser Controller">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scpi-commands-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SCPI Commands Used
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thorlabs-mdt-piezo-stage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thorlabs MDT Piezo Stage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Thorlabs MDT Piezo Stage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connection_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auber-pid-temperature-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auber PID Temperature Controller
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Auber PID Temperature Controller">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connection_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#k-type-thermocouple-via-daq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        K-Type Thermocouple (via DAQ)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optical-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optical Path
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Api
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Api
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/hal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HAL API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/trajectory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trajectory API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/twin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Twin API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#system-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ni-usb-6421-daq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NI USB-6421 DAQ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NI USB-6421 DAQ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channel-assignments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Channel Assignments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#synchronisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Synchronisation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overriding-channel-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overriding Channel Names
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ni-daqmx-driver" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NI-DAQmx Driver
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#galvo-mirrors-xy-scanning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Galvo Mirrors (X/Y Scanning)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Galvo Mirrors (X/Y Scanning)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#safety" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Safety
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parking
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spad-detector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SPAD Detector
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cld1015-laser-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CLD1015 Laser Controller
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CLD1015 Laser Controller">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scpi-commands-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SCPI Commands Used
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thorlabs-mdt-piezo-stage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thorlabs MDT Piezo Stage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Thorlabs MDT Piezo Stage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connection_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auber-pid-temperature-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auber PID Temperature Controller
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Auber PID Temperature Controller">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connection_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#k-type-thermocouple-via-daq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        K-Type Thermocouple (via DAQ)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optical-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optical Path
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="hardware-setup">Hardware Setup</h1>
+<p>This guide covers wiring, channel assignments, and instrument configuration for the OptoTwin-HIL confocal microscopy system.</p>
+<hr />
+<h2 id="system-overview">System Overview</h2>
+<pre><code>                    ┌──────────────────┐
+                    │  Host PC (USB)   │
+                    └──┬───┬───┬───┬──┘
+                       │   │   │   │
+          ┌────────────┘   │   │   └────────────┐
+          ▼                ▼   ▼                ▼
+   ┌─────────────┐  ┌─────────┐ ┌──────────┐  ┌───────────┐
+   │ NI USB-6421 │  │CLD1015  │ │MDT Piezo │  │Auber PID  │
+   │   (DAQ)     │  │ (Laser) │ │ (Focus)  │  │  (Temp)   │
+   └──┬──┬──┬────┘  └─────────┘ └──────────┘  └───────────┘
+      │  │  │
+      │  │  └─── PFI0 ◄── SPAD photon pulses
+      │  └────── AO1  ──► Y Galvo Mirror
+      └───────── AO0  ──► X Galvo Mirror
+</code></pre>
+<hr />
+<h2 id="ni-usb-6421-daq">NI USB-6421 DAQ</h2>
+<p>The DAQ is the central synchronisation hub. It drives the galvo mirrors and counts photons from the SPAD detector.</p>
+<h3 id="channel-assignments">Channel Assignments</h3>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Direction</th>
+<th>Function</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Dev1/ao0</code></td>
+<td>Analog Out</td>
+<td>X galvo mirror</td>
+<td>±10 V range</td>
+</tr>
+<tr>
+<td><code>Dev1/ao1</code></td>
+<td>Analog Out</td>
+<td>Y galvo mirror</td>
+<td>±10 V range</td>
+</tr>
+<tr>
+<td><code>Dev1/ctr0</code></td>
+<td>Counter In</td>
+<td>SPAD photon counter</td>
+<td>Edge counting</td>
+</tr>
+<tr>
+<td><code>/Dev1/PFI0</code></td>
+<td>Digital In</td>
+<td>SPAD pulse input terminal</td>
+<td>1.8 V logic</td>
+</tr>
+<tr>
+<td><code>Dev1/ai0</code></td>
+<td>Analog In</td>
+<td>External photodiode (optional)</td>
+<td>0-10 V</td>
+</tr>
+<tr>
+<td><code>Dev1/port0</code></td>
+<td>Digital I/O</td>
+<td>Logic family configuration</td>
+<td>1.8 V</td>
+</tr>
+</tbody>
+</table>
+<h3 id="synchronisation">Synchronisation</h3>
+<p>The AO sample clock is routed internally to the CI counter as its timebase. This ensures every counter bin corresponds exactly to one AO sample, providing zero-latency synchronisation without external wiring.</p>
+<pre><code>AO Task ─── sample clock ───► CI Task
+  │                              │
+  ├─ writes X voltage            ├─ counts rising edges on PFI0
+  └─ writes Y voltage            └─ returns cumulative count per sample
+</code></pre>
+<h3 id="overriding-channel-names">Overriding Channel Names</h3>
+<p>Use environment variables to target different devices or channels:</p>
+<pre><code class="language-bash">export OT_AO_X=&quot;Dev2/ao0&quot;
+export OT_AO_Y=&quot;Dev2/ao1&quot;
+export OT_CI=&quot;Dev2/ctr0&quot;
+</code></pre>
+<h3 id="ni-daqmx-driver">NI-DAQmx Driver</h3>
+<p>Install the NI-DAQmx driver from <a href="https://www.ni.com/en/support/downloads/drivers/download.ni-daq-mx.html">ni.com/downloads</a>. The Python <code>nidaqmx</code> package wraps this driver.</p>
+<p>Verify the device is detected:</p>
+<pre><code class="language-python">import nidaqmx
+system = nidaqmx.system.System.local()
+for device in system.devices:
+    print(device.name)  # Should show &quot;Dev1&quot;
+</code></pre>
+<hr />
+<h2 id="galvo-mirrors-xy-scanning">Galvo Mirrors (X/Y Scanning)</h2>
+<p>Two analog-output-driven galvanometer mirrors steer the excitation beam in X and Y.</p>
+<table>
+<thead>
+<tr>
+<th>Axis</th>
+<th>DAQ Channel</th>
+<th>Typical Range</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X</td>
+<td><code>Dev1/ao0</code></td>
+<td>±5 V</td>
+<td>Horizontal beam steering</td>
+</tr>
+<tr>
+<td>Y</td>
+<td><code>Dev1/ao1</code></td>
+<td>±5 V</td>
+<td>Vertical beam steering</td>
+</tr>
+</tbody>
+</table>
+<h3 id="safety">Safety</h3>
+<p>The <code>SupervisorConfig.interlock_volts</code> parameter (default: 9.5 V) provides a software interlock. The supervisor will fault if commanded voltages exceed this threshold, protecting the mirrors from over-travel.</p>
+<h3 id="parking">Parking</h3>
+<p>After every scan, call <code>daq.park()</code> to return both mirrors to (0, 0) V. This prevents thermal drift while the beam is stationary at an off-centre position.</p>
+<hr />
+<h2 id="spad-detector">SPAD Detector</h2>
+<p>A Single-Photon Avalanche Diode provides the photon-counting signal.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Output</td>
+<td>TTL pulses (one per photon)</td>
+</tr>
+<tr>
+<td>Connection</td>
+<td>PFI0 terminal on NI USB-6421</td>
+</tr>
+<tr>
+<td>Logic level</td>
+<td>1.8 V</td>
+</tr>
+<tr>
+<td>DAQ mode</td>
+<td>Counter input, edge counting</td>
+</tr>
+</tbody>
+</table>
+<p>The counter is configured for cumulative edge counting. Per-pixel counts are obtained by differentiating the cumulative trace:</p>
+<pre><code class="language-python">per_pixel = np.insert(np.diff(cumulative_counts), 0, cumulative_counts[0])
+</code></pre>
+<p>The <code>reconstruct_image()</code> function handles this automatically.</p>
+<hr />
+<h2 id="cld1015-laser-controller">CLD1015 Laser Controller</h2>
+<p>Coherent CLD1015 butterfly diode laser controller, connected via USB (VISA).</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Interface</td>
+<td>USB (VISA)</td>
+</tr>
+<tr>
+<td>Serial number</td>
+<td><code>M00959058</code></td>
+</tr>
+<tr>
+<td>Protocol</td>
+<td>SCPI</td>
+</tr>
+<tr>
+<td>TEC control</td>
+<td>Yes (temperature setpoint + readback)</td>
+</tr>
+<tr>
+<td>Current control</td>
+<td>Yes (drive current in amps)</td>
+</tr>
+<tr>
+<td>Monitor PD</td>
+<td>Yes (internal photodiode current readback)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="connection">Connection</h3>
+<pre><code class="language-python">from optotwin.hal import LaserDriver
+
+with LaserDriver.connect(serial=&quot;M00959058&quot;) as laser:
+    laser.set_tec(True)
+    laser.set_temp(25.0)
+    laser.set_current(0.050)
+    laser.set_output(True)
+</code></pre>
+<h3 id="scpi-commands-used">SCPI Commands Used</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>SCPI Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>get_temp()</code></td>
+<td><code>SENSe2:DATA?</code></td>
+</tr>
+<tr>
+<td><code>set_temp(t)</code></td>
+<td><code>SOURce2:TEMP:SPO {t}</code></td>
+</tr>
+<tr>
+<td><code>get_current()</code></td>
+<td><code>SENSe3?</code></td>
+</tr>
+<tr>
+<td><code>set_current(i)</code></td>
+<td><code>SOURce1:CURR {i}</code></td>
+</tr>
+<tr>
+<td><code>get_pd_current()</code></td>
+<td><code>SENSe1?</code></td>
+</tr>
+<tr>
+<td><code>set_output(on)</code></td>
+<td><code>OUTPut1:STATe {0\|1}</code></td>
+</tr>
+<tr>
+<td><code>is_output_on()</code></td>
+<td><code>OUTPut1:STATe?</code></td>
+</tr>
+<tr>
+<td><code>set_tec(on)</code></td>
+<td><code>OUTPut2:STATe {0\|1}</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="thorlabs-mdt-piezo-stage">Thorlabs MDT Piezo Stage</h2>
+<p>Piezo-driven focus stage for Z-axis control.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Interface</td>
+<td>USB Serial</td>
+</tr>
+<tr>
+<td>Baud rate</td>
+<td>115200</td>
+</tr>
+<tr>
+<td>Control axis</td>
+<td>Y (used for focus/Z)</td>
+</tr>
+<tr>
+<td>Voltage range</td>
+<td>0 -- 150 V (device dependent)</td>
+</tr>
+<tr>
+<td>Library</td>
+<td><code>MDT_COMMAND_LIB</code> (Thorlabs SDK)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="connection_1">Connection</h3>
+<pre><code class="language-python">from optotwin.hal import PiezoStage
+
+with PiezoStage() as piezo:
+    piezo.set_y_voltage(35.0)
+    print(f&quot;Focus voltage: {piezo.get_y_voltage():.1f} V&quot;)
+</code></pre>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>Install the Thorlabs MDT Command Library from the Thorlabs software downloads page. The <code>MDT_COMMAND_LIB</code> Python bindings must be importable.</p>
+<hr />
+<h2 id="auber-pid-temperature-controller">Auber PID Temperature Controller</h2>
+<p>ModBus RTU temperature controller with K-type thermocouple input.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Interface</td>
+<td>RS-485 via USB-Serial adapter</td>
+</tr>
+<tr>
+<td>Port</td>
+<td><code>COM5</code> (default)</td>
+</tr>
+<tr>
+<td>Slave address</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Baud rate</td>
+<td>9600</td>
+</tr>
+<tr>
+<td>Register</td>
+<td>1000 (process temperature)</td>
+</tr>
+<tr>
+<td>Protocol</td>
+<td>ModBus RTU</td>
+</tr>
+</tbody>
+</table>
+<h3 id="connection_2">Connection</h3>
+<pre><code class="language-python">from optotwin.hal import AuberController
+
+auber = AuberController(port=&quot;COM5&quot;, slave_address=3)
+temp = auber.get_temperature()
+print(f&quot;Temperature: {temp:.1f} °C&quot;)
+</code></pre>
+<hr />
+<h2 id="k-type-thermocouple-via-daq">K-Type Thermocouple (via DAQ)</h2>
+<p>Direct thermocouple reading through the NI DAQ analog input, as an alternative to the Auber controller.</p>
+<pre><code class="language-python">from optotwin.hal import ThermocoupleReader
+
+tc = ThermocoupleReader(channel=&quot;Dev1/ai0&quot;)
+temp = tc.get_temperature()
+print(f&quot;Temperature: {temp:.1f} °C&quot;)
+</code></pre>
+<hr />
+<h2 id="optical-path">Optical Path</h2>
+<pre><code>Laser (CLD1015)
+    │
+    ▼
+Single-Mode Fiber ──► spatial filtering
+    │
+    ▼
+Collimator
+    │
+    ▼
+X Galvo Mirror (AO0)
+    │
+    ▼
+Y Galvo Mirror (AO1)
+    │
+    ▼
+Objective Lens
+    │
+    ▼
+Sample ◄── Piezo Stage (focus)
+    │
+    ▼ (reflected/fluorescent photons)
+Pinhole (confocal aperture)
+    │
+    ▼
+SPAD Detector ──► PFI0 (TTL pulses)
+</code></pre>
+<p>The single-mode fiber acts as the illumination pinhole, providing spatial filtering. The detection pinhole rejects out-of-focus light, giving the system its confocal sectioning capability.</p>
+<hr />
+<h2 id="troubleshooting">Troubleshooting</h2>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Likely Cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>nidaqmx.DaqError: device not found</code></td>
+<td>DAQ not connected or driver not installed</td>
+<td>Check USB, install NI-DAQmx</td>
+</tr>
+<tr>
+<td>All counts are zero</td>
+<td>SPAD not powered, wrong PFI terminal, or logic level mismatch</td>
+<td>Verify SPAD output, check 1.8 V logic on port0</td>
+</tr>
+<tr>
+<td>Image has diagonal stripes</td>
+<td>Bidirectional raster flip not applied</td>
+<td>Use <code>reconstruct_image()</code> instead of manual reshape</td>
+</tr>
+<tr>
+<td>Image is mirrored</td>
+<td>X or Y axis inverted</td>
+<td>Swap <code>xlims</code> or <code>ylims</code> tuple order</td>
+</tr>
+<tr>
+<td><code>pyvisa.errors.VisaIOError</code></td>
+<td>Laser not connected or wrong serial</td>
+<td>Check USB, verify serial number</td>
+</tr>
+<tr>
+<td>Piezo not responding</td>
+<td>MDT library not installed or device not found</td>
+<td>Install Thorlabs MDT Command Library</td>
+</tr>
+<tr>
+<td>ModBus timeout</td>
+<td>Wrong COM port or slave address</td>
+<td>Verify port and address with Auber documentation</td>
+</tr>
+<tr>
+<td>Scan takes too long</td>
+<td>Too many pixels or long dwell time</td>
+<td>Check <code>cfg.total_time_s</code> before starting</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

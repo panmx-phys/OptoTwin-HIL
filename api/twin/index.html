@@ -1,0 +1,1065 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../trajectory/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>Twin API Reference - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#twin-api-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Twin API Reference
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OptoTwin-HIL Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples &amp; Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Api
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Api
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HAL API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trajectory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trajectory API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Twin API Reference
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Twin API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#physical-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Physical Models
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Physical Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gaussian_step_edge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gaussian_step_edge
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="gaussian_step_edge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curve-fitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Curve Fitting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Curve Fitting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edgefitresult" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EdgeFitResult
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fit_edge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fit_edge
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="fit_edge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-beam-profiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow: Beam Profiling
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#physical-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Physical Models
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Physical Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gaussian_step_edge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gaussian_step_edge
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="gaussian_step_edge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curve-fitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Curve Fitting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Curve Fitting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edgefitresult" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EdgeFitResult
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fit_edge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fit_edge
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="fit_edge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-beam-profiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow: Beam Profiling
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="twin-api-reference">Twin API Reference</h1>
+<p><code>optotwin.twin</code> -- Digital twin forward models and curve fitting for confocal beam metrology.</p>
+<pre><code class="language-python">from optotwin.twin import gaussian_step_edge, fit_edge, EdgeFitResult
+</code></pre>
+<hr />
+<h2 id="physical-models">Physical Models</h2>
+<p><strong>Module:</strong> <code>optotwin.twin.models</code></p>
+<h3 id="gaussian_step_edge"><code>gaussian_step_edge</code></h3>
+<pre><code class="language-python">def gaussian_step_edge(
+    x: ArrayLike,
+    x0: float,
+    sigma: float,
+    i_low: float,
+    i_high: float,
+) -&gt; NDArray[np.float64]
+</code></pre>
+<p>Gaussian-convolved step-edge (knife-edge) intensity response model.</p>
+<p>This models the signal observed when a focused Gaussian beam of width <code>sigma</code> sweeps across an absorbing edge located at position <code>x0</code>. It is the standard model for beam profiling via the knife-edge technique.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>x</code></td>
+<td><code>ArrayLike</code></td>
+<td>Position array (volts or physical units)</td>
+</tr>
+<tr>
+<td><code>x0</code></td>
+<td><code>float</code></td>
+<td>Edge position</td>
+</tr>
+<tr>
+<td><code>sigma</code></td>
+<td><code>float</code></td>
+<td>1/e² Gaussian beam radius (beam waist)</td>
+</tr>
+<tr>
+<td><code>i_low</code></td>
+<td><code>float</code></td>
+<td>Background intensity (fully occluded)</td>
+</tr>
+<tr>
+<td><code>i_high</code></td>
+<td><code>float</code></td>
+<td>Peak intensity (fully unoccluded)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <code>NDArray[np.float64]</code> with same shape as <code>x</code>.</p>
+<p><strong>Formula:</strong></p>
+<pre><code>I(x) = (I_high - I_low) / 2 × [1 + erf((x - x0) / (√2 × σ))] + I_low
+</code></pre>
+<p><strong>Physical interpretation:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Region</th>
+<th>Value</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x &lt;&lt; x0</td>
+<td>≈ I_low</td>
+<td>Beam fully blocked by edge</td>
+</tr>
+<tr>
+<td>x = x0</td>
+<td>(I_high + I_low) / 2</td>
+<td>Beam half-occluded (midpoint)</td>
+</tr>
+<tr>
+<td>x &gt;&gt; x0</td>
+<td>≈ I_high</td>
+<td>Beam fully passes edge</td>
+</tr>
+</tbody>
+</table>
+<p>The transition width is governed by <code>sigma</code>: a tighter beam produces a sharper step.</p>
+<h4 id="example">Example</h4>
+<pre><code class="language-python">import numpy as np
+from optotwin.twin import gaussian_step_edge
+
+x = np.linspace(-5, 5, 1000)
+intensity = gaussian_step_edge(x, x0=0.0, sigma=1.0, i_low=100, i_high=5000)
+
+# At x=0: intensity ≈ 2550 (midpoint)
+# At x=-5: intensity ≈ 100  (background)
+# At x=+5: intensity ≈ 5000 (peak)
+</code></pre>
+<hr />
+<h2 id="curve-fitting">Curve Fitting</h2>
+<p><strong>Module:</strong> <code>optotwin.twin.optimizer</code></p>
+<h3 id="edgefitresult"><code>EdgeFitResult</code></h3>
+<pre><code class="language-python">@dataclass
+class EdgeFitResult:
+    x0: float           # Fitted edge position
+    sigma: float        # Fitted beam 1/e² radius
+    i_low: float        # Fitted background level
+    i_high: float       # Fitted peak level
+    residual_rms: float # RMS of fit residuals
+</code></pre>
+<p>All fields are populated by <code>fit_edge()</code>.</p>
+<hr />
+<h3 id="fit_edge"><code>fit_edge</code></h3>
+<pre><code class="language-python">def fit_edge(
+    positions: ArrayLike,
+    counts: ArrayLike,
+    p0: tuple[float, float, float, float] | None = None,
+) -&gt; EdgeFitResult
+</code></pre>
+<p>Fit the <code>gaussian_step_edge</code> model to measured photon counts using nonlinear least-squares (<code>scipy.optimize.curve_fit</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>positions</code></td>
+<td><code>ArrayLike</code></td>
+<td>--</td>
+<td>1-D scan positions (same units as voltage or physical coords)</td>
+</tr>
+<tr>
+<td><code>counts</code></td>
+<td><code>ArrayLike</code></td>
+<td>--</td>
+<td>1-D measured photon counts (same length as positions)</td>
+</tr>
+<tr>
+<td><code>p0</code></td>
+<td><code>tuple \| None</code></td>
+<td><code>None</code></td>
+<td>Initial guess <code>(x0, sigma, i_low, i_high)</code>. Auto-estimated if <code>None</code>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <code>EdgeFitResult</code> dataclass.</p>
+<p><strong>Auto-estimation heuristic</strong> (when <code>p0=None</code>):
+- <code>x0</code> ≈ midpoint of position range
+- <code>sigma</code> ≈ range / 10
+- <code>i_low</code> ≈ min(counts)
+- <code>i_high</code> ≈ max(counts)</p>
+<h4 id="example_1">Example</h4>
+<pre><code class="language-python">import numpy as np
+from optotwin.twin import gaussian_step_edge, fit_edge
+
+# Generate synthetic data
+x = np.linspace(-3, 3, 200)
+true_signal = gaussian_step_edge(x, x0=0.5, sigma=0.8, i_low=50, i_high=4000)
+noise = np.random.normal(0, 30, size=x.shape)
+measured = true_signal + noise
+
+# Fit
+result = fit_edge(x, measured)
+
+print(f&quot;Edge position: {result.x0:.3f}&quot;)     # ≈ 0.500
+print(f&quot;Beam radius:   {result.sigma:.3f}&quot;)   # ≈ 0.800
+print(f&quot;Background:    {result.i_low:.1f}&quot;)    # ≈ 50.0
+print(f&quot;Peak:          {result.i_high:.1f}&quot;)   # ≈ 4000.0
+print(f&quot;Residual RMS:  {result.residual_rms:.2f}&quot;)
+</code></pre>
+<hr />
+<h2 id="workflow-beam-profiling">Workflow: Beam Profiling</h2>
+<p>A complete knife-edge beam profiling measurement:</p>
+<pre><code class="language-python">from optotwin.core import ScanConfig
+from optotwin.hal import DAQOrchestrator
+from optotwin.trajectory import linspace_sweep
+from optotwin.twin import fit_edge
+import numpy as np
+
+# 1. Generate 1-D sweep across the edge
+sweep = linspace_sweep(start=-2.0, stop=2.0, n_points=500, axis=0)
+
+# 2. Acquire
+daq = DAQOrchestrator()
+cumulative = daq.run(sweep.T, dwell_time=1e-3)  # transpose to (2, N)
+daq.park()
+
+# 3. Convert cumulative → per-pixel
+counts = np.insert(np.diff(cumulative), 0, cumulative[0])
+positions = sweep[:, 0]  # X voltages
+
+# 4. Fit edge model
+result = fit_edge(positions, counts)
+
+print(f&quot;Edge at:      {result.x0:.4f} V&quot;)
+print(f&quot;Beam waist:   {result.sigma:.4f} V&quot;)
+print(f&quot;Residual RMS: {result.residual_rms:.1f} counts&quot;)
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
